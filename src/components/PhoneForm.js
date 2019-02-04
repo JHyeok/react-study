@@ -8,7 +8,7 @@ class PhoneForm extends Component {
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
-    })
+    });
   }
   handleSubmit = (e) => {
     e.preventDefault();
@@ -16,7 +16,7 @@ class PhoneForm extends Component {
     this.setState({
       name: '',
       phone: ''
-    })
+    });
   }
   render() {
     return (
