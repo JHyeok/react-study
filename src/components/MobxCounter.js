@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 // eslint-disable-next-line
-import { decorate, observable, action } from 'mobx';
-import { observer } from 'mobx-react';
+// import { decorate, observable, action } from 'mobx';
+import { observer, inject } from 'mobx-react';
 
+/*
 @observer
 class MobxCounter extends Component {
   @observable number = 0;
@@ -28,13 +29,37 @@ class MobxCounter extends Component {
   }
 }
 
-// Decorator 를 함께 사용하면 아래의 코드는 더 이상 필요없음.
-// @observer, @observable, @action 을 어노테이션 사용하는 것처럼 붙여주면 됨.
-// decorate(MobxCounter, {
-//   number: observable,
-//   increase: action,
-//   decrease: action
-// })
+export default MobxCounter;
+*/
 
-// export default observer(MobxCounter);
+/* inject 로 stores/mobxCounter 주입 */
+// @inject('mobxCounter')
+/* 특정 값이나 함수만 넣어주고 싶다면 */
+@inject(stores => ({
+  number: stores.mobxCounter.number,
+  increase: stores.mobxCounter.increase,
+  decrease: stores.mobxCounter.decrease,
+}))
+@observer
+class MobxCounter extends Component {
+  render () {
+    // const { mobxCounter } = this.props;
+    // return (
+    //   <div>
+    //     <h1>{mobxCounter.number}</h1>
+    //     <button onClick={mobxCounter.increase}>+1</button>
+    //     <button onClick={mobxCounter.decrease}>-1</button>
+    //   </div>
+    /* 특정 값이나 함수만 넣어주고 싶다면 */
+    const { number, increase, decrease } = this.props;
+    return (
+      <div>
+        <h1>{number}</h1>
+        <button onClick={increase}>+1</button>
+        <button onClick={decrease}>-1</button>
+      </div>
+    )
+  }
+}
+
 export default MobxCounter;
