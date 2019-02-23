@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+// eslint-disable-next-line
 import { decorate, observable, action } from 'mobx';
 import { observer } from 'mobx-react';
 
 @observer
 class MobxCounter extends Component {
-  number = 0;
+  @observable number = 0;
 
   @action
   increase = () => {
@@ -28,7 +29,7 @@ class MobxCounter extends Component {
 }
 
 // Decorator 를 함께 사용하면 아래의 코드는 더 이상 필요없음.
-// @observer, @action 을 어노테이션 사용하는 것처럼 붙여주면 됨.
+// @observer, @observable, @action 을 어노테이션 사용하는 것처럼 붙여주면 됨.
 // decorate(MobxCounter, {
 //   number: observable,
 //   increase: action,
