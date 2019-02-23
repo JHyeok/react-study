@@ -1,3 +1,4 @@
+/*
 import React, { Component } from 'react';
 import PhoneForm from './components/PhoneForm';
 import PhoneInfoList from './components/PhoneInfoList';
@@ -69,6 +70,23 @@ class App extends Component {
         onRemove={this.handleRemove}
         onUpdate={this.handleUpdate}
         />
+      </div>
+    );
+  }
+}
+
+export default App;
+*/
+
+/* mobx study */
+import React, { Component } from 'react';
+import MobxCounter from './components/MobxCounter';
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <MobxCounter />
       </div>
     );
   }
