@@ -1,0 +1,19 @@
+.MarketTemplate {
+  width: 768px;
+  display: flex;
+  border: 1px solid red;
+  margin: 3rem auto 0 auto;
+}
+
+.MarketTemplate {
+  margin-top: 0;
+}
+
+.MarketTemplate>div {
+  padding: 1rem;
+  flex: 1;
+}
+
+.MarketTemplate .items-wrapper {
+  background: #FAECC5;
+}
