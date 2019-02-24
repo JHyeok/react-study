@@ -1,7 +1,7 @@
 .MarketTemplate {
   width: 768px;
   display: flex;
-  border: 1px solid red;
+  border: 1px solid #F5ECCE;
   margin: 3rem auto 0 auto;
 }
 
@@ -15,5 +15,5 @@
 }
 
 .MarketTemplate .items-wrapper {
-  background: #FAECC5;
+  background: #F7F2E0;
 }

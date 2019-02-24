@@ -78,18 +78,23 @@ class App extends Component {
 export default App;
 */
 
-/* mobx study */
+/* MobX Study
+   Market App */
 import React, { Component } from 'react';
 import MobxCounter from './components/MobxCounter';
+import MarketTemplate from './components/MarketTemplate';
 
 class App extends Component {
   render() {
     return (
       <div>
         <MobxCounter />
+        <hr />
+        <MarketTemplate />
       </div>
     );
   }
 }
 
 export default App;
+

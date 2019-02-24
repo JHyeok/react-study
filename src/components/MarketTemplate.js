@@ -1,5 +1,5 @@
-import React from 'React';
-import './MarketTemplate.css';
+import React from 'react';
+import '../MarketTemplate.css'
 
 const MarketTemplate = ({ items, basket }) => {
   return (
