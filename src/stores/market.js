@@ -3,18 +3,23 @@ import { observable, action, computed } from "mobx";
 export default class MarketStore {
   @observable selectedItems = [];
 
+  constructor(root) {
+    this.root = root;
+  }
+
   @action
   put = (name, price) => {
+    const { number } = this.root.mobxCounter;
     const itemExists = this.selectedItems.find(item => item.name === name);
     if (!itemExists) {
       this.selectedItems.push({
         name,
         price,
-        count: 1
+        count: number
       });
       return;
     }
-    itemExists.count++;
+    itemExists.count += number;
   };
 
   @action

@@ -4,14 +4,13 @@ import { Provider } from 'mobx-react';
 import './styles/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import MobxCounterStore from './stores/mobxCounter';
-import MarketStore from './stores/market';
+import RootStore from './stores';
 
-const mobxCounter = new MobxCounterStore();
-const market = new MarketStore();
+const root = new RootStore();
 
 ReactDOM.render(
-  <Provider mobxCounter={mobxCounter} market={market}>
+  // ...root 로 스토어 자동 설정
+  <Provider {...root}>
     <App />
   </Provider>,
   document.getElementById('root')
