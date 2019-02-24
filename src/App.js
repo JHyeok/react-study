@@ -83,6 +83,7 @@ export default App;
 import React, { Component } from 'react';
 import MobxCounter from './components/MobxCounter';
 import Market from './components/Market';
+import DevTools from 'mobx-react-devtools';
 
 class App extends Component {
   render() {
@@ -91,6 +92,7 @@ class App extends Component {
         <MobxCounter />
         <hr />
         <Market />
+        {process.env.NODE_ENV === 'development' && <DevTools />}
       </div>
     );
   }
