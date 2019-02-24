@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/MarketTemplate.css'
 
-const MarketTemplate = ({ items, basket }) => {
+const MarketTemplate = ({ items, basket, total }) => {
   return (
     <div className="MarketTemplate">
       <div className="items-wrapper">
@@ -11,6 +11,7 @@ const MarketTemplate = ({ items, basket }) => {
       <div className="items-wrapper">
         <h2>장바구니</h2>
         {basket}
+        {total}
       </div>
     </div>
   );
