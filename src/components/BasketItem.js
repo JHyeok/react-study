@@ -1,5 +1,5 @@
 import React from 'react';
-import '../BasketItem.css';
+import '../styles/BasketItem.css';
 import { observer } from 'mobx-react';
 
 const BasketItem = ({ name, price, count, onTake }) => {

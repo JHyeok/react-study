@@ -1,5 +1,5 @@
 import React from 'react';
-import '../MarketItem.css';
+import '../styles/MarketItem.css';
 
 const MarketItem = ({ name, price, onPut }) => {
   return (
