@@ -1,0 +1,21 @@
+.MarketItem {
+  background: white;
+  border: 1px solid #495057;
+  padding: 0.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.MarketItem h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.MarketItem:hover {
+  background: #495057;
+  color: white;
+}
+
+.MarketItem+.MarketItem {
+  margin-top: 1rem;
+}

@@ -82,7 +82,7 @@ export default App;
    Market App */
 import React, { Component } from 'react';
 import MobxCounter from './components/MobxCounter';
-import MarketTemplate from './components/MarketTemplate';
+import Market from './components/Market';
 
 class App extends Component {
   render() {
@@ -90,7 +90,7 @@ class App extends Component {
       <div>
         <MobxCounter />
         <hr />
-        <MarketTemplate />
+        <Market />
       </div>
     );
   }
